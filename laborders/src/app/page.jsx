@@ -5,6 +5,11 @@ import Odontogram from "./components/odontograma";
 import ColorPalette from "./components/color";
 import colors from "./data/colors";
 import FileUpload from "./components/filedrop";
+import AuroraHero from "./components/hero";
+import ProsthesisGrid, { FirstCard } from "./components/prothesisgrid";
+import BentoGrid from "./components/prothesisgrid";
+import { Grid } from "@react-three/drei";
+import Prothegrid from "./components/prothesisgrid";
 
 
 export default function Home() {
@@ -17,22 +22,24 @@ export default function Home() {
   };
 
   return (
-    <main className="flex min-h-screen flex-col justify-between p-10">
-      <div className="flex mx-auto">
-      <Image 
-          src="./images/logo.webp"  // This path assumes logo.png is directly under the public/images folder
-          alt="logo"
-          width={200}            // Specify the width
-          height={100}           // Specify the height
-          unoptimized={true}     // Use this prop if you face issues with image optimization
-        />
+    
+    <main className="flex min-h-screen flex-col justify-between p-0">
+
+<div className="w-full h-screen">
+  <AuroraHero />
+</div>
+
+
+<div id="formsection" className="flex justify-center items-center min-h-screen bg-[#121c21]">
+      <div className="w-full max-w-[1100px]">
+        <Prothegrid />
       </div>
+    </div>
+
 
   <form action="#" method="POST" class="mx-auto mt-16 max-w-xxl sm:mt-20">
     <div class="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
-    <div className=" sm:col-span-2 block ">
-        <h1 className="font-semibold text-xl">Nueva orden de trabajo</h1>
-      </div>
+
       <div>
 
       </div>
