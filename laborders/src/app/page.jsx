@@ -4,6 +4,7 @@ import { useState } from "react";
 import Odontogram from "./components/odontograma";
 import ColorPalette from "./components/color";
 import colors from "./data/colors";
+import FileUpload from "./components/filedrop";
 
 
 export default function Home() {
@@ -30,28 +31,28 @@ export default function Home() {
   <form action="#" method="POST" class="mx-auto mt-16 max-w-xxl sm:mt-20">
     <div class="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
     <div className=" sm:col-span-2 block ">
-        <h1 className="font-semibold text-xl">Formulario de orden de trabajo</h1>
+        <h1 className="font-semibold text-xl">Nueva orden de trabajo</h1>
       </div>
-      <div className="text-sm">
-          <p>hola haz tu pedido</p>
-        </div>
-        <div>
-
-        </div>
       <div>
-        <label for="nombre" class="block text-sm font-semibold leading-6 text-gray-900">Nombre</label>
+
+      </div>
+      <div>
+
+      </div>
+      <div>
+        <label for="nombre" class="text-2xl font-bold my-5">Nombre</label>
         <div class="mt-2.5">
           <input type="text" name="Nombre" id="nombre" autocomplete="given-name" class="block w-full rounded-md border-0 px-3.5 py-4 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"/>
         </div>
       </div>
       <div>
-        <label for="paciente" class="block text-sm font-semibold leading-6 text-gray-900">Paciente, referencia o caso</label>
+        <label for="paciente" class="text-2xl font-bold my-5">Paciente, referencia o caso</label>
         <div class="mt-2.5">
           <input type="text" name="paciente" id="paciente" autocomplete="paciente" class="block w-full rounded-md border-0 px-3.5 py-4 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"/>
         </div>
       </div>
       <div class="sm:col-span-2">
-        <label for="protesis" class="block text-sm font-semibold leading-6 text-gray-900">Prótesis</label>
+        <label for="protesis" class="text-2xl font-bold my-5">Prótesis</label>
         <div class="mt-2.5">
           <select name="protesis" id="protesis" class="block w-full rounded-md border-0 px-3.5 py-5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
               <option>Fija</option>
@@ -63,7 +64,7 @@ export default function Home() {
          </div>
       </div>
       <div class="sm:col-span-2">
-        <label for="tipos" class="block text-sm font-semibold leading-6 text-gray-900">Tipos</label>
+        <label for="tipos" class="text-2xl font-bold my-5">Tipos</label>
         <div class="mt-2.5">
           <select name="tipos" id="tipos" class="block w-full rounded-md border-0 px-3.5 py-5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
               <option>Corona</option>
@@ -75,7 +76,7 @@ export default function Home() {
          </div>
       </div>
       <div class="sm:col-span-2">
-        <label for="material" class="block text-sm font-semibold leading-6 text-gray-900">Material</label>
+        <label for="material" class="text-2xl font-bold my-5">Material</label>
         <div class="mt-2.5">
           <select name="material" id="protesis" class="block w-full rounded-md border-0 px-3.5 py-5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
               <option>Zirconio monolítico</option>
@@ -87,7 +88,7 @@ export default function Home() {
          </div>
       </div>
       <div class="sm:col-span-2">
-        <label for="protesis" class="block text-sm font-semibold leading-6 text-gray-900">Registros</label>
+        <label for="protesis" class="text-2xl font-bold my-5">Registros</label>
         <div class="mt-2.5">
           <select name="protesis" id="registros" class="block w-full rounded-md border-0 px-3.5 py-5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
               <option>Plancha de articulación</option>
@@ -97,14 +98,14 @@ export default function Home() {
          </div>
       </div>
       <div class="sm:col-span-2">
-        <label for="piezas" class="block text-sm font-semibold leading-6 text-gray-900">Piezas (odontograma)</label>
+        <label for="piezas" class="text-2xl font-bold my-5">Piezas (odontograma)</label>
         <div class="mt-2.5">
           <Odontogram />
         
         </div>
       </div>
       <div class="sm:col-span-2">
-        <label for="email" class="block text-sm font-semibold leading-6 text-gray-900">Ponticos</label>
+        <label for="email" class="text-2xl font-bold my-5">Ponticos</label>
         <div class="mt-2.5">
           <select name="ponticos" id="ponticos" className="px-3.5 py-5 block rounded-md border-0 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus_ring-2 focus:ring-indigo-600 sm_text-sm sm_leading-6">
             <option value="1">1</option>
@@ -120,11 +121,34 @@ export default function Home() {
             </select>        
           </div>
       </div>
-      <div className="sm:col-span-2">
-      <label for="color" class="block text-sm font-semibold leading-6 text-gray-900">Color</label>
+      <div className="sm:col-span-2" >
+      <label for="color" class="text-2xl font-bold my-5">Color</label>
       <ColorPalette colors={colors} />
       </div>
       <div class="sm:col-span-2">
+
+<div>
+  
+<div>
+<label for="color" class="text-2xl font-bold my-5">Tipos de archivos</label>
+</div>
+<div>
+
+<div class="flex items-center ps-4 border border-gray-200 rounded dark:border-gray-700">
+    <input id="bordered-checkbox-1" type="checkbox" value="" name="bordered-checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"/>
+    <label for="bordered-checkbox-1" class="w-full py-4 ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Default radio</label>
+</div>
+
+</div>
+
+
+</div>
+
+      <div className="container mx-auto w-full">
+      <h1 className="text-2xl font-bold my-5">Sube tus archivos</h1>
+      <FileUpload />
+    </div>
+
         
 
       </div>
