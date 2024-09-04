@@ -10,6 +10,7 @@ import ProsthesisGrid, { FirstCard } from "./components/prothesisgrid";
 import BentoGrid from "./components/prothesisgrid";
 import { Grid } from "@react-three/drei";
 import Prothegrid from "./components/prothesisgrid";
+import NavBar from "./components/navbar";
 
 
 export default function Home() {
@@ -24,6 +25,7 @@ export default function Home() {
   return (
     
     <main className="flex min-h-screen flex-col justify-between p-0">
+
 
 <div className="w-full h-screen">
   <AuroraHero />
